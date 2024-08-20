@@ -3037,6 +3037,13 @@ input:focus {
   overflow: hidden; /* Hide overflow for the scrolling effect */
 }
 
+.srex-sponsor h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:60px;
+}
+
 .srex-sponsor__items {
   display: flex;
   flex-wrap: nowrap; /* Prevent wrapping, so items scroll horizontally */
@@ -3080,7 +3087,7 @@ input:focus {
 }
 
 .srex-sponsor-two {
-  margin-top: 120px;
+  margin-top: 60px;
 }
 
 @media (max-width: 767px) {
