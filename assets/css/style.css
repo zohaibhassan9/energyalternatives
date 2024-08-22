@@ -1595,7 +1595,7 @@ input:focus {
 ------------------------------------*/
 .srex-hero-two {
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%), url(../images/home-two/hero/hero-bg-image.png) no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7) 100%, rgba(0, 0, 0, 0.7) 100%), url(../images/home-two/hero/hero-bg-image.png) no-repeat center center/cover;
 }
 .srex-hero-two__box {
   padding: 100px 0px 20px 0;
@@ -1777,7 +1777,7 @@ input:focus {
 ------------------------------------*/
 .srex-service {
   background: #fff;
-  padding-top: 100px;
+  padding-top: 30px;
 }
 @media (max-width: 767px) {
   .srex-service {
@@ -1796,7 +1796,7 @@ input:focus {
 
 .srex-service-two {
   background: #F8F7F0;
-  padding-top: 100px;
+  padding-top: 10px;
   position: relative;
 }
 .srex-service-two__frame {
@@ -1827,8 +1827,14 @@ input:focus {
   margin-bottom: 40px;
 }
 .srex-service-two .srex-stats {
-  margin-top: 150px;
+  margin-top: 110px;
+  text-align: center;
 }
+
+.srex-stats--two .container {
+  margin-top: 50px;
+}
+
 @media (max-width: 767px) {
   .srex-service-two .srex-stats {
     margin-top: 60px;
@@ -2132,6 +2138,10 @@ input:focus {
     max-width: 90%;
     margin: 0 auto;
   }
+}
+
+.srex-about-us-two {
+  margin-top:100px;
 }
 
 @media (max-width: 767px) {
@@ -3384,13 +3394,15 @@ input:focus {
 	17/ News Letter
 ------------------------------------*/
 .srex-news-letter {
-  margin-top: -100px;
+  /* margin-top: -100px; */
+  margin-top:100px;
+  margin-bottom:100px;
 }
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .srex-news-letter {
     margin-top: -145px;
   }
-}
+} */
 .srex-news-letter--three {
   margin-top: -125px;
   position: relative;
@@ -4894,6 +4906,11 @@ input:focus {
   border: 1px solid #e3e3e3;
   border-radius: 20px;
   padding: 40px 30px;
+}
+.srex-support__item img {
+  /* filter: invert(95%) sepia(89%) saturate(7000%) hue-rotate(-30deg) brightness(95%) contrast(90%); */
+  /* filter: url(#F9A91C); */
+  fill: #F9A91C;
 }
 @media (max-width: 767px) {
   .srex-support__item {
