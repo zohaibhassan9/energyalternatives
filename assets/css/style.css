@@ -4801,8 +4801,14 @@ input:focus {
     padding-bottom: 20px;
   }
 }
+.srex-footer-two__links__logo img {
+  padding-bottom: 20px;
+  height:130px;
+}
 .srex-footer-two__links__logo__text {
-  padding: 30px 100px 40px 0;
+  padding: 0px 0px 30px 0;
+  color:#fff;
+  font-weight:bold;
 }
 @media (max-width: 767px) {
   .srex-footer-two__links__logo__text {
@@ -4819,7 +4825,7 @@ input:focus {
     padding: 25px 0;
   }
 }
-.srex-footer-two__links__social_links li {
+.srex-footer-two__links__social_links a {
   background: #24231D;
   border: 1px solid #2D65A7;
   color: #fff;
@@ -4835,7 +4841,7 @@ input:focus {
       justify-content: center;
   transition: all 0.3s ease;
 }
-.srex-footer-two__links__social_links li:hover {
+.srex-footer-two__links__social_links a:hover {
   background-color: #2D65A7;
   color: #fff;
 }
