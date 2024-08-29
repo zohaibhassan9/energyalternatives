@@ -2346,6 +2346,253 @@ input:focus {
   font-weight: 700;
 }
 
+/* Affan Styles */
+.about-hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero-section::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 300px;
+  background-image: url('./assets/images/dots-pattern.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.hero-image-container {
+  position: relative;
+  width: 50%;
+  z-index: 2;
+}
+
+.hero-large-image {
+  width: 80%;
+  border-radius: 25px;
+}
+
+.hero-small-image {
+  position: absolute;
+  bottom: -35px;
+  left: 55%;
+  width: 45%;
+  border-radius: 30px;
+  border: 7px solid white;
+}
+
+.hero-dots-image {
+  position: absolute;
+  bottom: 225px;
+  left: 80%;
+  width: 18%;
+}
+
+.hero-text-container {
+  width: 50%;
+  padding-left: 40px;
+  z-index: 2;
+}
+
+.hero-text-container h2 {
+  color: #2D65A7;
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.hero-text-container p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero-features i{
+  color:#89EA5F;
+}
+
+.hero-feature-item {
+  width: 48%;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+  /* font-weight:bold; */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .about-hero-section {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .hero-image-container {
+      width: 100%;
+      text-align: left;
+      margin-left: -10px; /* Moves the images to the left */
+  }
+
+  .hero-large-image {
+      width: 85%; /* Increases the size of the images */
+  }
+
+  .hero-small-image {
+    width: 55%; /* Increases the size of the images */
+}
+
+  .hero-small-image {
+      left: 50%; /* Adjusts the position of the small image */
+  }
+
+  .hero-dots-image {
+    position: absolute;
+    bottom: 105px;
+    left: 85%;
+    width: 18%;
+  }
+
+  .hero-text-container {
+      width: 100%;
+      padding-left: 0;
+      margin-top: 20px;
+      text-align: left;
+  }
+
+  .hero-text-container p {
+    font-size: 12px;
+  }
+
+  .hero-feature-item {
+      width: 100%;
+      font-size: 11px;
+  }
+
+  .hero-text-container h2 {
+    margin-top:40px;
+    margin-bottom: 5px;
+    font-size:24px;
+  }
+
+  .about-hero-section::before {
+      top: auto;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 200px;
+  }
+}
+
+
+
+
+/* Affan */
+.ceo-message-section {
+  padding: 50px 40px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  max-width: 1400px;
+  margin: 40px auto;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.ceo-message-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.ceo-image-container {
+  flex: 1;
+  text-align: center;
+}
+
+.ceo-image {
+  width: 95%;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.ceo-text-container {
+  flex: 2;
+  padding-left: 40px;
+}
+
+.ceo-text-container h2 {
+  font-size: 36px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.ceo-text-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.ceo-signature {
+  font-style: italic;
+  font-weight: 500;
+  color: #4CAF50;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .ceo-message-section {
+      padding: 30px 15px;
+  }
+
+  .ceo-message-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .ceo-text-container {
+      padding-left: 0;
+      padding-top: 20px;
+  }
+
+  .ceo-text-container h2 {
+      font-size: 28px;
+  }
+
+  .ceo-text-container p {
+      font-size: 16px;
+  }
+
+  .ceo-image {
+      width: 60%;
+      max-width: 200px;
+  }
+}
 /*------------------------------------
 	11/ Features
 ------------------------------------*/
