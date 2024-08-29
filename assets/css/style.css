@@ -2545,7 +2545,7 @@ input:focus {
 
 .ceo-text-container h2 {
   font-size: 36px;
-  color: #4CAF50;
+  color: #F9A91C;
   margin-bottom: 20px;
   font-weight: 700;
 }
@@ -2591,6 +2591,130 @@ input:focus {
   .ceo-image {
       width: 60%;
       max-width: 200px;
+  }
+}
+
+/* affan call-us call us */
+.call-us-section {
+  display: flex;
+  align-items: center;
+  background-color: #f4f5f5;
+  border-radius: 30px;
+  margin: 100px auto;
+  max-width: 70rem;
+  overflow: hidden;
+  height: 240px;
+  flex-direction: row;
+}
+
+.call-us-image img {
+  width: 600%;
+}
+
+.call-us-telephone {
+  background: #4CAF50;
+  padding: 17px;
+  border-radius: 50%;
+  margin-left: -36px;
+  border: 4px solid white;
+}
+
+.call-us-telephone:hover {
+  background: #88EA5F;
+}
+
+.call-us-content {
+  margin-left: 70px;
+  margin-right: 60px;
+}
+
+.call-us-content h2 {
+  font-size: 40px;
+  color: #232f00;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin:20px;
+}
+
+.call-us-content h2 span {
+  color: #4CAF50;
+}
+
+.call-us-content p {
+  color: #8c8c8c;
+  font-size: 16px;
+  font-weight: 600;
+}
+.call-us-shell{
+  margin:20px;
+}
+
+/* Tablet */
+/* @media only screen and (max-width: 1024px) {
+  .call-us-section {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .call-us-image img {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .call-us-telephone {
+    margin: 0 auto 20px auto;
+  }
+
+  .call-us-content {
+    margin: 0 auto;
+  }
+
+  .call-us-content h2 {
+    font-size: 32px;
+  }
+
+  .call-us-content p {
+    font-size: 14px;
+  }
+} */
+
+/* Mobile */
+@media only screen and (max-width: 1024px) {
+  .call-us-section {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    margin:100px auto;
+    padding-bottom: 20px;
+    max-width: 50rem;
+  }
+
+  .call-us-image img {
+    width: 450%;
+    margin-bottom: 20px;
+  }
+
+  .call-us-telephone {
+    /* margin: -60 auto 40px auto; */
+    margin-top:-60px;
+    margin-bottom: 40px;
+    margin-left:0rem;
+  }
+
+  .call-us-content {
+    margin: 0 auto;
+  }
+
+  .call-us-content h2 {
+    font-size: 28px;
+  }
+
+  .call-us-content p {
+    font-size: 14px;
+    padding:20px;
   }
 }
 /*------------------------------------
