@@ -72,6 +72,86 @@
 		type: "iframe",
 	});
 
+
+	/**
+	 * Affan Video Code
+	 */
+	document.addEventListener('DOMContentLoaded', function() {
+		document.getElementById('playButton').addEventListener('click', function(e) {
+		  e.preventDefault();
+	  
+		  // Get the video box and elements
+		  var videoBox = document.getElementById('videoBox');
+		  var thumbnail = document.getElementById('videoThumbnail');
+	  
+		  // Replace the image with an iframe but keep it hidden
+		  var iframe = document.createElement('iframe');
+		  iframe.src = "https://www.youtube.com/embed/ZSyGd2rYdTI?autoplay=1";
+		  iframe.width = "560";
+		  iframe.height = "470";
+		  iframe.frameBorder = "0";
+		  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+		  iframe.allowFullscreen = true;
+		  iframe.style.borderRadius = "40px";
+		  iframe.style.position = "absolute";
+		  iframe.style.top = "0";
+		  iframe.style.left = "0";
+		  iframe.style.width = "100%";
+		  iframe.style.height = "100%";
+		  iframe.style.opacity = "0"; // Start with the video hidden
+		  iframe.style.transition = "opacity 0.5s ease-in-out"; // Smooth fade-in
+	  
+		  videoBox.appendChild(iframe);
+	  
+		  // Fade out the image
+		  thumbnail.style.opacity = "0";
+	  
+		  // Fade in the video
+		  setTimeout(function() {
+			iframe.style.opacity = "1"; // Fade in the video
+		  }, 300); // Small delay to ensure smooth transition
+	  
+		  // Remove the play button after click
+		  this.style.display = "none";
+		});
+	  });
+	// document.getElementById('playButton').addEventListener('click', function(e) {
+	// 	e.preventDefault(); // Prevent the default anchor behavior
+	  
+	// 	// Get the video box and elements
+	// 	var videoBox = document.getElementById('videoBox');
+	// 	var thumbnail = document.getElementById('videoThumbnail');
+	  
+	// 	// Replace the image with an iframe but keep it hidden
+	// 	var iframe = document.createElement('iframe');
+	// 	iframe.src = "https://www.youtube.com/embed/ZSyGd2rYdTI?autoplay=1";
+	// 	iframe.width = "560";
+	// 	iframe.height = "470";
+	// 	iframe.frameBorder = "0";
+	// 	iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+	// 	iframe.allowFullscreen = true;
+	// 	iframe.style.borderRadius = "40px";
+	// 	iframe.style.position = "absolute";
+	// 	iframe.style.top = "0";
+	// 	iframe.style.left = "0";
+	// 	iframe.style.width = "100%";
+	// 	iframe.style.height = "100%";
+	// 	iframe.style.opacity = "0"; // Start with the video hidden
+	// 	iframe.style.transition = "opacity 0.5s ease-in-out"; // Smooth fade-in
+	  
+	// 	videoBox.appendChild(iframe);
+	  
+	// 	// Fade out the image
+	// 	thumbnail.style.opacity = "0";
+	  
+	// 	// Fade in the video
+	// 	setTimeout(function() {
+	// 	  iframe.style.opacity = "1"; // Fade in the video
+	// 	}, 300); // Small delay to ensure smooth transition
+	  
+	// 	// Remove the play button after click
+	// 	this.style.display = "none";
+	//   });
 	/**
 	 * Testimonial Slider - Home One
 	 */
