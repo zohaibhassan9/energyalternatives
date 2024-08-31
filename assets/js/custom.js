@@ -86,7 +86,8 @@
 	  
 		  // Replace the image with an iframe but keep it hidden
 		  var iframe = document.createElement('iframe');
-		  iframe.src = "https://www.youtube.com/embed/ZSyGd2rYdTI?autoplay=1";
+		//   iframe.src = "https://www.youtube.com/embed/ZSyGd2rYdTI?autoplay=1";
+		  iframe.src = "https://www.youtube.com/embed/ZSyGd2rYdTI?autoplay=1&controls=0";
 		  iframe.width = "560";
 		  iframe.height = "470";
 		  iframe.frameBorder = "0";

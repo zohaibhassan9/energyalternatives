@@ -537,6 +537,17 @@ input:focus {
 /*------------------------------------
 	Button
 ------------------------------------*/
+.form-submit-button{
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 30px; /* 214.286% */
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 15px 25px;
+}
 .srex-btn {
   font-family: Manrope;
   font-size: 14px;
@@ -764,6 +775,117 @@ input:focus {
 }
 .srex-info-box--feature-box .srex-info-box__item__img {
   background: #2D65A7;
+}
+/* Affan Info box iamges styling */
+.custom-info-box__item {
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  height: 450px; /* Adjusted height for the card */
+}
+
+.custom-info-box__item__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Light overlay */
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.custom-info-box__item:hover .custom-info-box__item__overlay {
+  background-color: rgba(136, 234, 95, 0.7); /* Yellow overlay on hover */
+}
+
+.custom-info-box__item__icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.custom-info-box__item__icon img {
+  width: 80px; /* Size of the icon */
+  height: 80px;
+  padding:20px;
+  border-radius: 20px;
+  background-color: #fff  ;
+}
+
+.custom-info-box__content {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 1); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 20px; /* Rounded bottom corners */
+  z-index: 2;
+  box-sizing: border-box;
+  text-align: left;
+  margin:30px;
+}
+
+.custom-info-box__item__text {
+  margin-bottom: 2px;
+  font-weight: bold;
+  color: #2D65A7;
+}
+
+.custom-service-text {
+  margin-bottom: 4px;
+  color: #878680;
+}
+
+.custom-info-box__more {
+  display: flex;
+  align-items: center;
+}
+
+.custom-info-box__more a {
+  color: #2D65A7;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+
+.custom-info-box__more i {
+  color: #2D65A7;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+/* Background images for each card with unique classes */
+.solar-pv {
+  background-image: url('../images/services/solarpv.jpg');
+}
+
+.fabrication {
+  background-image: url('../images/services/fabrication.jpg');
+}
+
+.generator {
+  background-image: url('../images/services/generator.jpg');
+}
+
+.consultancy {
+  background-image: url('../images/services/consultancy.jpg');
+}
+
+.financing {
+  background-image: url('../images/services/financing.png');
+}
+
+.testing {
+  background-image: url('../images/services/testing.jpg');
 }
 
 /*------------------------------------
@@ -2590,7 +2712,7 @@ input:focus {
   }
 
   .ceo-image {
-      width: 60%;
+      width: 80%;
       max-width: 200px;
   }
 }
@@ -2741,19 +2863,19 @@ input:focus {
 }
 @media (max-width: 767px) {
   .srex-video {
-    margin-top: -80px;
+    margin-top: 150px;
     margin-bottom: 60px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .srex-video {
-    margin-top: -120px;
+    margin-top: 150px;
     margin-bottom: 60px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1280px) {
   .srex-video {
-    margin-top: -180px;
+    margin-top: 150px;
     margin-bottom: 40px;
   }
 }
@@ -3272,6 +3394,9 @@ input:focus {
 	color: #2D65A7;
 }
 
+.srex-single-pro-img img{
+  border-radius: 20px;
+}
 
 .single_pro_details{}
 .single_pro_details h1 {
@@ -3300,52 +3425,79 @@ input:focus {
 	font-size: 12px;
 	margin-right:10px;
 }
-.single_pro_details_info {
-	border: 1px solid #ddd;
-	margin-top: 30px;
-	overflow: hidden;
+.project-details-info {
+  background-color: #EEF1EC;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 30px;
 }
 
-.spdi h3 {
-	background: #F8F7F0;
-	text-align: center;
-	padding: 30px;
-	margin: -1px;
+.project-details-info h3 {
+  text-align: left;
+  font-weight: bold;
+  color: #2D65A7;
+  margin-bottom: 20px;
 }
-.spdi_info {
-	padding: 20px 40px;
-	overflow: hidden;
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.spdi_info_details {
-	float: left;
-	width: 50%;
-	border-bottom: 1px solid #ddd;
-	padding-bottom: 30px;
+
+.project-info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-.spdi_info_details span{font-weight:600;}
-.spdi_info p{}
-.spdi_social_rat {text-align:center;}
-.spdi_social_rat h4 {
-	/* float: left; */
-	margin-bottom: 10px;
+
+.project-info-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  padding: 13px;
+  background: #2D65A7;
 }
-.spdi_social_rat i {color:#ef783d;}
-.spdi_social {}
-.spdi_social ul {text-align:center;}
-.spdi_social ul li {
-	display: inline-block;
+
+.project-info-text {
+  display: flex;
+  flex-direction: column;
 }
-.spdi_social ul li a{
-	display: block;
-	background: #ededed;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	border-radius: 100px;
-	transition: 0.3s;
-	margin: 0 2px;
+
+.project-info-text span {
+  font-weight: 900;
+  font-size: 20px;
+  color: #2D65A7;
+  margin-bottom: 5px;
 }
-.spdi_social ul li a:hover{background: #2D65A7;color:#fff;}
+
+.project-info-text p {
+  margin: 0;
+  font-size: 20px;
+  color: #878680;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .project-details-info {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .project-info-item img {
+    width: 60px;
+    height: 60px;
+    padding: 14px;
+  }
+
+  .project-info-text span, .project-info-text p {
+    font-size: 16px;
+  }
+
+  .project-info-item {
+    gap: 15px;
+  }
+}
 /*END SINGLE PROJECT DETAILS*/
 /*------------------------------------
 	15/ Sponsor
