@@ -889,11 +889,14 @@ input:focus {
 }
 
 .solar-pv-sticky-left{
+  @media (min-width: 991px) {
+
   top: 110px; 
   position: -webkit-sticky; /* For Safari */
   position: sticky;
   top: 100px; /* Adjust this based on your preference */
   height: fit-content; /* Ensure the left column takes up only necessary height */
+}
 }
 /*------------------------------------
 	Accordion
@@ -2084,12 +2087,13 @@ input:focus {
   margin: 20px 0;
   /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
   font-family: Arial, sans-serif;
-  overflow: auto; /* Ensure overflow handling */
+  overflow: auto; /*Ensure overflow handling*/
   border-radius: 20px; /* Rounded corners */
 }
 
 .solar-pv-toc:hover {
   border: 1px solid #000; /* Gray border */
+  transition: border 0.9s ease; /* Smooth transition for color change */
 }
 .solar-pv-toc h2 {
   font-size: 22px;
@@ -2132,7 +2136,7 @@ input:focus {
             margin-top: 50px;
             font-size: 24px;
             font-weight: bold;
-            scroll-margin-top: 100px;
+            scroll-margin-top: 120px;
         }
 
 .single_ser_details   p {
