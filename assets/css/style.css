@@ -67,9 +67,6 @@ Colors
 /**
  * Fade in animation
 */
-.ud-fade-in {
-  animation-name: fadeIn;
-}
 
 @keyframes fadeIn {
   from {
@@ -269,6 +266,43 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+
+
+/* Style for the loading screen */
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Change to your preferred background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's above everything else */
+}
+
+/* Logo animation */
+.logo {
+  width: 200px; /* Adjust logo size as needed */
+  animation: logoFadeIn 0.5s ease-out; /* Animation for the logo */
+}
+
+/* Keyframes for logo animation */
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0; /* Start fully transparent */
+    transform: scale(0.8); /* Start slightly smaller */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* End at original size */
+  }}
+/* Animation is ended when a page is fully laoded  */
+
+
+
 
 img {
   max-width: 100%;
@@ -511,6 +545,7 @@ input:focus {
 }
 .srex-section__head__badge {
   color: #2D65A7;
+  font-size: 20px;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-align: center;
@@ -519,8 +554,8 @@ input:focus {
   margin-bottom: 10px;
 }
 .srex-section__head__badge img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 /*------------------------------------
 	Container
@@ -590,9 +625,9 @@ input:focus {
   border: 1px solid #FAAA1B;
 }
 .srex-btn--secondary:hover {
-  background-color: #2D65A7;
-  border-color: #FAAA1B;
-  color: #fff;
+  background-color: transparent;
+  border-color: #ffffff;
+  color: #FAAA1B;
 }
 .srex-btn--white {
   color: #24231D;
@@ -645,6 +680,151 @@ input:focus {
 .srex-icon-list--multi-text ul li p {
   color: #878680;
 }
+
+
+
+
+
+/* Floating Social Media Icons */
+/* .social-icons {
+  position: fixed;
+  top: 66%;
+  left: 95%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.social-icon {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-icon i {
+  font-size: 20px;
+}
+
+.social-icon:hover {
+  background-color: #555;
+} */
+
+/* Floating Social Media Icons */
+/* Floating Social Media Icons */
+.social-icons {
+  position: fixed;
+  top: 50%;
+  left: 95%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.social-icon {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+  background-color: #333;
+  color: #FAAA1B;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 30%;
+  transition: background-color 0.3s;
+  animation: pulse-spread 2.5s infinite;
+  box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); /* Initial shadow */
+}
+
+.social-icon i {
+  font-size: 20px;
+}
+
+.social-icon:hover {
+  color: #FAAA1B;
+  background-color: #555;
+}
+
+/* Keyframes for pulse spread animation */
+@keyframes pulse-spread {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
+  }
+  70% {
+    transform: scale(.9); /* Expand size */
+    box-shadow: 0 0 20px 20px rgba(250, 170, 27, 0); /* Spread shadow */
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(250, 170, 27, 0); /* Reset shadow */
+  }
+}
+
+/* Responsive CSS for smaller devices */
+@media only screen and (max-width: 768px) {
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+
+  .social-icon i {
+    font-size: 18px;
+  }
+
+  @keyframes pulse-spread {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
+    }
+    70% {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px 15px rgba(250, 170, 27, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .social-icon i {
+    font-size: 16px;
+  }
+
+  @keyframes pulse-spread {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
+    }
+    70% {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px 10px rgba(250, 170, 27, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
+    }
+  }
+}
+
+
+
+
+
+
 
 /*------------------------------------
 	Overlay
@@ -782,10 +962,11 @@ input:focus {
   background-size: cover;
   background-position: center;
   margin-bottom: 30px;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.8s ease-in-out; /* Smooth transition */
   position: relative;
   overflow: hidden;
   height: 450px; /* Adjusted height for the card */
+  transform: scale(1); /* Set initial size */
 }
 
 .custom-info-box__item__overlay {
@@ -795,13 +976,14 @@ input:focus {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2); /* Light overlay */
-  transition: background-color 0.3s ease-in-out;
   z-index: 1;
 }
 
-.custom-info-box__item:hover .custom-info-box__item__overlay {
-  background-color: rgba(136, 234, 95, 0.7); /* Yellow overlay on hover */
+.custom-info-box__item:hover {
+  transform: scale(0.9); /* Zoom out on hover */
 }
+
+
 
 .custom-info-box__item__icon {
   position: absolute;
@@ -877,15 +1059,15 @@ input:focus {
 }
 
 .consultancy {
-  background-image: url('../images/services/consultancy.jpg');
+  background-image: url('../images/services/team-work-energy-alternatives.jpg');
 }
 
 .financing {
-  background-image: url('../images/services/financing.png');
+  background-image: url('../images/services/renewable-energy-alternative-pakistan-investment-solar-panels-piggy-bank-transformed.jpeg');
 }
 
 .testing {
-  background-image: url('../images/services/testing.jpg');
+  background-image: url('../images/services/energy-alternatives-solar-testing-service.png');
 }
 
 .solar-pv-sticky-left{
@@ -1060,33 +1242,45 @@ input:focus {
 ------------------------------------*/
 .srex-top-header {
   background: #FAE4A3;
-  padding: 5px 0 5px 0;
+  padding: 5px 0;
 }
+
 @media (max-width: 767px) {
   .srex-top-header {
     padding: 15px 10px;
   }
 }
+
 .srex-top-header p {
   color: #24231D;
 }
+
 @media (max-width: 767px) {
   .srex-top-header p {
     font-size: 10px;
   }
 }
+
 .srex-top-header ul {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
-      justify-content: flex-end;
+  justify-content: flex-end;
 }
+
+.srex-top-header ul li {
+  margin: 0; /* Optional: Reset margin if any */
+}
+
 .srex-top-header ul li a {
-  padding: 0 12px;
+  padding: 0 8px; /* Reduced padding */
+  margin: 0; /* Ensure no margin */
 }
+
 .srex-top-header ul li a:last-child {
   padding-right: 0;
 }
+
 
 /*------------------------------------
 	07/ Header
@@ -1125,7 +1319,7 @@ input:focus {
   margin-left: 5px;
 }
 .ud-main-menu ul > li > a:hover {
-  color: #2D65A7;
+  color: #faaa1b;
 }
 .ud-main-menu ul > li:hover > ul {
   opacity: 1;
@@ -1413,6 +1607,7 @@ input:focus {
 .srex-header__call h4 a:hover {
   color: #2D65A7;
 }
+
 
 /*------------------------------------
 	Header Home Two
@@ -1726,7 +1921,7 @@ input:focus {
 	Hero Two
 ------------------------------------*/
 .green-color{
-  color:#1E8F2D !important;
+  color:#e5a928 !important;
 }
 .srex-hero-two {
   width: 100%;
@@ -3880,7 +4075,7 @@ input:focus {
   left: 30px;
   width: 305px;
   width: 305px;
-  background: #2D65A7;
+  background: #faaa1b;
   color: #fff;
   padding: 30px 40px;
   border-radius: 20px;
@@ -3979,167 +4174,173 @@ input:focus {
 /*------------------------------------
 	17/ News Letter
 ------------------------------------*/
+/* General Newsletter Section Styles */
 .srex-news-letter {
-  /* margin-top: -100px; */
-  margin-top:250px;
-  margin-bottom:-100px;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
-/* @media (max-width: 767px) {
-  .srex-news-letter {
-    margin-top: -145px;
-  }
-} */
-.srex-news-letter--three {
-  margin-top: -125px;
-  position: relative;
-  z-index: 99;
-}
-.srex-news-letter--three .srex-news-letter__box {
-  background-color: #2D65A7;
-  background-image: url(../images/newsletter-three-bg.png);
-  background-repeat: no-repeat;
-}
-.srex-news-letter--three .srex-news-letter__box__left {
-  gap: 20px;
-}
-.srex-news-letter--three .srex-news-letter__box__left h2 {
-  color: #fff;
-}
-.srex-news-letter--three .srex-news-letter__box__left p {
-  color: #fff;
-}
-.srex-news-letter--three .srex-news-letter__box__right input {
-  background-color: transparent;
-  color: #fff;
-}
-.srex-news-letter--three .srex-news-letter__box__right input:-ms-input-placeholder {
-  color: #fff;
-}
-.srex-news-letter--three .srex-news-letter__box__right input::placeholder {
-  color: #fff;
-}
-.srex-news-letter--three .srex-news-letter__box__right button {
-  font-weight: 800;
-}
+
 .srex-news-letter__box {
-  background: #F8F7F0;
-  padding: 60px;
+  background-color: #2D65A7;
+  padding: 50px;
   border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.srex-news-letter__box__left h2 {
+  color: #000000;
+  margin-bottom: 20px;
+  font-size: 46px;
+}
+
+.srex-news-letter__box__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center child elements horizontally */
+  justify-content: center; /* Center child elements vertically */
+  text-align: center; /* Ensure text is centered */
+}
+
+.srex-news-letter__box__left p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 60%; /* Set a maximum width for the paragraph */
+  text-align: center; /* Center text within the paragraph */
+}
+
+.srex-news-letter__box__right form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.srex-news-letter__box__right input {
+  border-radius: 999px;
+  padding: 16px;
+  border: 2px solid #E3E3E3;
+  width: 250px;
+  max-width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid black;
+}
+
+.srex-news-letter__box__right button {
+  background-color: #FFBA08;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 16px 30px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.srex-news-letter__box__right button:hover {
+
+  color: #00376b;
+}
+
+.srex-news-letter__box--two {
+  background-color: #2D65A7;
+}
+
 @media (max-width: 767px) {
   .srex-news-letter__box {
     padding: 40px 20px;
   }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-news-letter__box {
-    padding: 45px;
+
+  .srex-news-letter__box__left h2 {
+    font-size: 28px;
   }
-}
-.srex-news-letter__box--two {
-  background-color: #2D65A7;
-  margin-top: -125px;
-}
-.srex-news-letter__box--two .srex-news-letter__box__left {
-  display: block;
-  text-align: center;
-}
-.srex-news-letter__box--two .srex-news-letter__box__left .srex-section__frame {
-  top: 50px;
-  left: 40%;
-}
-.srex-news-letter__box--two .srex-news-letter__box__left h2 {
-  padding: 0px !important;
-  margin-bottom: 20px;
-  color: #fff;
-}
-.srex-news-letter__box--two .srex-news-letter__box__left p {
-  color: #fff;
-}
-.srex-news-letter__box__left {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-}
-@media (max-width: 767px) {
-  .srex-news-letter__box__left {
-    margin-bottom: 30px;
+
+  .srex-news-letter__box__left p {
+    font-size: 16px;
   }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-news-letter__box__left {
-    -ms-flex-pack: center;
-        justify-content: center;
-  }
-}
-.srex-news-letter__box__left h3, .srex-news-letter__box__left .srex-accordion .accordion-header__left__badge, .srex-accordion .srex-news-letter__box__left .accordion-header__left__badge {
-  font-size: 24px;
-  padding-left: 20px;
-  padding-right: 80px;
-}
-@media (max-width: 767px) {
-  .srex-news-letter__box__left h3, .srex-news-letter__box__left .srex-accordion .accordion-header__left__badge, .srex-accordion .srex-news-letter__box__left .accordion-header__left__badge {
-    font-size: 18px;
-    padding-right: 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-news-letter__box__left h3, .srex-news-letter__box__left .srex-accordion .accordion-header__left__badge, .srex-accordion .srex-news-letter__box__left .accordion-header__left__badge {
-    padding-right: 0;
-  }
-}
-.srex-news-letter__box__right {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: end;
-      justify-content: end;
-}
-@media (max-width: 767px) {
-  .srex-news-letter__box__right {
-    display: block;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-news-letter__box__right {
-    -ms-flex-pack: center;
-        justify-content: center;
-    margin-top: 20px;
-  }
-}
-.srex-news-letter__box__right form {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  width: 100%;
-}
-@media (max-width: 767px) {
-  .srex-news-letter__box__right form {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    gap: 10px;
-  }
-}
-.srex-news-letter__box__right input {
-  border-radius: 999px;
-  padding: 16px;
-  padding-right: 80px;
-  margin-right: 10px;
-  border: 2px solid #E3E3E3;
-  width: 100%;
-}
-@media (max-width: 767px) {
+
   .srex-news-letter__box__right input {
     width: 100%;
-    margin-bottom: 10px;
+  }
+
+  .srex-news-letter__box__right button {
+    width: 100%;
   }
 }
-.srex-news-letter__box__right button {
-  width: 60%;
+
+
+
+
+/* Default styles for larger screens (desktop) */
+.srex-news-letter__box__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
+.srex-news-letter__box__left p {
+  color: #fff;
+  font-size: 16px; /* Slightly larger font for desktop */
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 60%; /* Max width for readability */
+  text-align: center;
+}
+
+/* Responsive form input styling */
+.srex-news-letter__box__left input {
+  padding: 10px;
+  width: 250px; /* Default input width */
+  margin-right: 10px;
+}
+
+.srex-news-letter__box__left button {
+  padding: 10px 20px;
+}
+
+/* Media queries for smaller devices */
+
+/* Tablets (768px and smaller) */
+@media only screen and (max-width: 768px) {
+  .srex-news-letter__box__left p {
+    font-size: 14px; /* Adjust font size for tablets */
+    max-width: 80%; /* Wider width for better readability */
+  }
+
+  .srex-news-letter__box__left input {
+    width: 200px; /* Adjust input size */
+  }
+
+  .srex-news-letter__box__left button {
+    padding: 10px 18px; /* Adjust button size */
+  }
+}
+
+/* Mobile phones (480px and smaller) */
+@media only screen and (max-width: 480px) {
+  .srex-news-letter__box__left p {
+    font-size: 12px; /* Smaller font for mobile */
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .srex-news-letter__box__left input {
+    width: 100%; /* Full-width input field */
+    margin-bottom: 10px; /* Add margin for spacing */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .srex-news-letter__box__left button {
+    width: 100%; /* Full-width button */
+    padding: 10px 0; /* Adjust padding */
+  }
+}
+
 
 /*------------------------------------
 	18/ Stats
@@ -4216,7 +4417,7 @@ input:focus {
 /*------------------------------------
 	19/ Testimonial
 ------------------------------------*/
-.srex-testimonial-one {
+/* .srex-testimonial-one {
   position: relative;
   background-color: #F8F7F0;
   margin-top: 100px;
@@ -4276,7 +4477,19 @@ input:focus {
   background-image: url(../images/plant.svg);
   background-repeat: no-repeat;
   background-position: center center;
-}
+} */
+
+/* Hover effect on quote alt image. */
+/* .srex-testimonial-one__slider__item__quote {
+  transition: transform 0.3s ease; /* Smooth transition for the effect */
+/* } */
+
+/* .srex-testimonial-one__slider__item__quote:hover {
+  transform: scale(1.1); /* Scale the image to 110% */
+ */
+
+
+
 @media (max-width: 767px) {
   .srex-testimonial-one__slider__item {
     padding: 40px 30px;
@@ -4376,7 +4589,8 @@ input:focus {
   background-size: cover;
   padding-top: 120px;
   padding-bottom: 270px;
-  border-radius: 40px;
+  width: 100%;
+  /* border-radius: 40px; */
 }
 @media (max-width: 767px) {
   .srex-testimonial-two {
@@ -5302,7 +5516,7 @@ input:focus {
 .srex-footer-two {
   background-color: #24231D;
   padding-top: 50px;
-  background-image: url(../images/footer-two-bg.png);
+  background-image: url(../images/footer-3-bg.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -5391,7 +5605,8 @@ input:focus {
 .srex-footer-two__links__logo__text {
   padding: 0px 0px 30px 0;
   color:#fff;
-  font-weight:bold;
+  font-weight:senibold;
+  width: 80%;
 }
 @media (max-width: 767px) {
   .srex-footer-two__links__logo__text {
